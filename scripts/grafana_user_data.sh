@@ -1,8 +1,8 @@
 #!/bin/bash
 yum update -y
 yum install -y docker python3 cronie
-sudo systemctl enable crond
-sudo systemctl start crond
+systemctl enable crond
+systemctl start crond
 systemctl start docker
 systemctl enable docker
 usermod -aG docker ec2-user
@@ -16,5 +16,6 @@ docker run -d \
   -v grafana-storage:/var/lib/grafana \
   grafana/grafana
 
-sudo yum install -y python3-pip
+yum install -y python3-pip
 /usr/bin/pip3 install boto3
+dnf install -y postgresql15

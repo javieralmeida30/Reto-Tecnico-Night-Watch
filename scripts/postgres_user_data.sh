@@ -1,12 +1,12 @@
 #!/bin/bash
-sudo yum update -y
-sudo yum install -y docker
-sudo service docker start
-sudo systemctl enable docker
-sudo usermod -aG docker ec2-user
+yum update -y
+yum install -y docker
+service docker start
+systemctl enable docker
+usermod -aG docker ec2-user
 
-sudo docker volume create postgres-data
-sudo docker run -d \
+docker volume create postgres-data
+docker run -d \
   --name postgres \
   --restart always \
   -e POSTGRES_USER=admin \
