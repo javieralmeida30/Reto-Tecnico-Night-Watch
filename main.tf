@@ -26,6 +26,10 @@ module "ec2" {
   private_sg_id     = module.security_groups.private_sg_id
 }
 
+module "s3" {
+  source = "./modules/s3"
+}
+
 output "grafana_url" {
   value = module.ec2.grafana_url
 }
