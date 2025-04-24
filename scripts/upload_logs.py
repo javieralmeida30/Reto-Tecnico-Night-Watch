@@ -57,4 +57,4 @@ with open(log_path, "w") as f:
 s3.upload_file(log_path, bucket_name, f"metrics/{today_str}.txt")
 print(f"✅ Upload to s3://{bucket_name}/metrics/{today_str}.txt")
 
-# crontab -e example: 0 2 * * * /usr/bin/python3 /home/ec2-user/scripts/log_metrics.py >> /home/ec2-user/cron.log 2>&1
+# crontab -e example: 0 2 * * * /usr/bin/python3 /home/ec2-user/scripts/log_metrics.py >> /home/ec2-user/cron.log 2>&1 run 2 am every day

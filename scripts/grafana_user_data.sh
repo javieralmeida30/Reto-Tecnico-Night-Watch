@@ -18,4 +18,4 @@ docker run -d \
 
 yum install -y python3-pip
 /usr/bin/pip3 install boto3
-dnf install -y postgresql15
+sudo dnf install -y postgresql17
