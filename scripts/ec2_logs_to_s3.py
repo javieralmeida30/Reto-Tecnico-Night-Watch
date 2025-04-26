@@ -53,7 +53,7 @@ with open(log_path, "w") as f:
             f.write("  No data\n")
         f.write("\n")
 
-# Subir a S3
+# Upload to S3
 s3.upload_file(log_path, bucket_name, f"metrics/{today_str}.txt")
 print(f"✅ Upload to s3://{bucket_name}/metrics/{today_str}.txt")
 
