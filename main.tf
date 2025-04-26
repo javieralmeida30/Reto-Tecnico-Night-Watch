@@ -29,11 +29,3 @@ module "ec2" {
 module "s3" {
   source = "./modules/s3"
 }
-
-output "grafana_url" {
-  value = module.ec2.grafana_url
-}
-
-output "postgres_host" {
-  value = module.ec2.postgres_host
-}

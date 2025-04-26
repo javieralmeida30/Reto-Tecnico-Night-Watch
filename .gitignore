@@ -3,3 +3,5 @@
 *.tfstate.backup
 *.pem
 *.tfvars
+outputs.txt
+grafana-dashboard.json

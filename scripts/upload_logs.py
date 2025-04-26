@@ -5,8 +5,8 @@ import datetime
 
 # Config
 region = "us-east-1"
-instance_id = "i-04411998570a4ef75"
-bucket_name = "nightwatch-logs-backups-538d89e6"
+private_instance_id = "InstanceId"
+bucket_name = "BucketName"
 namespace = "AWS/EC2"
 metrics = [
     "CPUUtilization",
@@ -30,12 +30,12 @@ cloudwatch = boto3.client("cloudwatch", region_name=region)
 s3 = boto3.client("s3", region_name=region)
 
 with open(log_path, "w") as f:
-    f.write(f"Métricas del {today_str} para {instance_id}\n\n")
+    f.write(f"Métricas del {today_str} para {private_instance_id}\n\n")
     for metric in metrics:
         response = cloudwatch.get_metric_statistics(
             Namespace=namespace,
             MetricName=metric,
-            Dimensions=[{"Name": "InstanceId", "Value": instance_id}],
+            Dimensions=[{"Name": "InstanceId", "Value": private_instance_id}],
             StartTime=start_time,
             EndTime=end_time,
             Period=3600,
