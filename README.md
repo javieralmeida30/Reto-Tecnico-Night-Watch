@@ -79,13 +79,13 @@ Use the terraform command `terraform output` to export the outputs: terraform ou
 
 
  Components:
- VPC: 10.0.0.0/16
- Public Subnet: EC2 Bastion Host (Grafana) 
- Private Subnet: EC2 PostgreSQL Server 
- S3 Bucket: Stores logs and metrics 
- CloudWatch: Monitors EC2 instances 
- NAT Gateway: Internet access for private subnet 
- Security Groups: Control access between instances 
+ - VPC: 10.0.0.0/16
+ - Public Subnet: EC2 Bastion Host (Grafana) 
+ - Private Subnet: EC2 PostgreSQL Server 
+ - S3 Bucket: Stores logs and metrics 
+ - CloudWatch: Monitors EC2 instances 
+ - NAT Gateway: Internet access for private subnet 
+ - Security Groups: Control access between instances 
 
 ---
 
