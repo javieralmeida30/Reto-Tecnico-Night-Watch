@@ -46,7 +46,7 @@ Before running the project, make sure you have:
 
 1. **Clone** the repository:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/javieralmeida30/Reto-Tecnico-Night-Watch.git
    ```
 
 2. **Initialize Terraform**:
