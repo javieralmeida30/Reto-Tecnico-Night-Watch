@@ -1,6 +1,6 @@
 #!/bin/bash
 yum update -y
-yum install -y docker python3 cronie nmap-ncat curl bind-utils
+yum install -y docker python3 cronie nmap-ncat bind-utils
 systemctl enable crond
 systemctl start crond
 systemctl start docker

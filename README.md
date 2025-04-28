@@ -1,5 +1,5 @@
 # ☁️ Reto Técnico - Night Watch
-### AWS Architecture with Grafana Monitoring, PostgreSQL Server, and S3 Logs
+### AWS Architecture with Grafana Monitoring, PostgreSQL Server, Kubernetes (K3s), and S3 Logs
 
 This project builds a simple but solid AWS infrastructure, including:
 - A **Grafana server** (bastion host) to monitor resources
@@ -96,6 +96,7 @@ Modules:
 `ec2` Bastion host and private PostgreSQL EC2 
 `s3` Bucket for backups and metrics 
 `security_groups` Rules to control traffic between instances 
+`(Optional) route53`: Pre-configured module for future DNS assignment
 
 Outputs:
 - Public and private IPs
@@ -113,7 +114,7 @@ Scripts:
 - `postgres_user_data.sh`  User data for PostgreSQL EC2 (Docker + PostgreSQL setup) 
 - `postgresql_daily_backup.sh`  Backs up PostgreSQL database daily to S3 
 - `ec2_logs_to_s3.py`  Collects CloudWatch metrics and uploads to S3 
-- `setup_scripts.sh`  Uploads and configures the scripts automatically via SSH
+- `setup_scripts.sh`  Uploads scripts via SSH, deploys Nginx on Kubernetes, and configures backups
 
 ---
 

@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-BASTION_IP="18.204.194.30"
-PRIVATE_IP="10.0.101.199"
+BASTION_IP="InstancePublicIP"
+PRIVATE_IP="InstancePrivateIP"
 KEY_PATH="~/.ssh/prueba-tecnica.pem"
 REMOTE_USER="ec2-user"
 DB_USER="admin"
