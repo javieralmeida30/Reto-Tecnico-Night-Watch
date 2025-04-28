@@ -18,4 +18,10 @@ docker run -d \
 
 yum install -y python3-pip
 /usr/bin/pip3 install boto3
-sudo dnf install -y postgresql17
+dnf install -y postgresql17
+
+curl -sfL https://get.k3s.io | sh -
+chmod 644 /etc/rancher/k3s/k3s.yaml
+
+echo 'export KUBECONFIG=/etc/rancher/k3s/k3s.yaml' >> /home/ec2-user/.bashrc
+
