@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-BASTION_IP="PublicIP"
+BASTION_IP="InstancePublicIP"
 KEY_PATH="~/.ssh/prueba-tecnica.pem"
 REMOTE_USER="ec2-user"
 MANIFEST_PATH="./nginx-deployment.yaml" 
