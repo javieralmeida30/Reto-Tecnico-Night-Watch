@@ -1,6 +1,6 @@
 resource "aws_instance" "public_ec2" {
   ami           = var.ami_id
-  instance_type = "t3.small"
+  instance_type = var.public_instance_type
   subnet_id     = var.public_subnet_id
   key_name      = var.key_name
   iam_instance_profile = aws_iam_instance_profile.grafana_profile.name
@@ -16,7 +16,7 @@ resource "aws_instance" "public_ec2" {
 
 resource "aws_instance" "private_ec2" {
   ami           = var.ami_id
-  instance_type = var.instance_type
+  instance_type = var.private_instance_type
   subnet_id     = var.private_subnet_id
   key_name      = var.key_name
   vpc_security_group_ids = [var.private_sg_id]

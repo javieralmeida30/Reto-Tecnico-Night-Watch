@@ -22,6 +22,8 @@ EOF
 
 echo "Nginx deployment applied on Kubernetes Accessible at http://$BASTION_IP:30080"
 
+echo "#############################################################"
+
 echo "Creating scripts folder on the EC2 instance..."
 ssh -i "$KEY_PATH" "$REMOTE_USER@$BASTION_IP" "mkdir -p /home/ec2-user/scripts"
 

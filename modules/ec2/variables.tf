@@ -3,6 +3,16 @@ variable "ami_id" {
   description = "AMI ID to use for EC2 instances"
 }
 
+variable "public_instance_type" {
+  type        = string
+  description = "Type of EC2 instance for public subnet"
+}
+
+variable "private_instance_type" {
+  type        = string
+  description = "Type of EC2 instance for private subnet"
+}
+
 variable "instance_type" {
   type        = string
   default     = "t2.micro"
