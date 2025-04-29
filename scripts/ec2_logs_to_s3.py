@@ -5,7 +5,7 @@ import datetime
 
 # Config
 region = "us-east-1"
-private_instance_id = "InstanceID"
+private_instance_id = "InstancePrivateID"
 bucket_name = "BucketName"
 namespace = "AWS/EC2"
 metrics = [

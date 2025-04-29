@@ -20,6 +20,14 @@ resource "aws_security_group" "public_sg" {
   }
 
   ingress {
+    description = "Prometheus from anywhere"
+    from_port   = 31080
+    to_port     = 31080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
     description = "Nginx from anywhere"
     from_port   = 30080
     to_port     = 30080

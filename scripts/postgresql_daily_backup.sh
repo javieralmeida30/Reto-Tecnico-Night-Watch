@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DB_HOST="10.0.101.28"
+DB_HOST="InstancePrivateIP"
 DB_NAME="admin"
 DB_USER="admin"
 DB_PASS="adminpass"

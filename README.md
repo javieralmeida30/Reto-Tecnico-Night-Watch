@@ -114,7 +114,7 @@ Scripts:
 - `postgres_user_data.sh`  User data for PostgreSQL EC2 (Docker + PostgreSQL setup) 
 - `postgresql_daily_backup.sh`  Backs up PostgreSQL database daily to S3 
 - `ec2_logs_to_s3.py`  Collects CloudWatch metrics and uploads to S3 
-- `setup_scripts.sh`  Uploads scripts via SSH, deploys Nginx on Kubernetes, and configures backups
+- `setup_scripts.sh`  Uploads scripts via SSH, deploys Nginx and Prometheus on Kubernetes, and configures backups
 
 ---
 
