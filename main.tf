@@ -18,7 +18,8 @@ module "security_groups" {
 module "ec2" {
   source            = "./modules/ec2"
   ami_id            = "ami-0e449927258d45bc4"  
-  instance_type     = "t2.micro"
+  public_instance_type  = "t3.small"
+  private_instance_type = "t2.micro" 
   key_name          = "prueba-tecnica"
   public_subnet_id  = module.vpc.public_subnets[0]
   private_subnet_id = module.vpc.private_subnets[0]

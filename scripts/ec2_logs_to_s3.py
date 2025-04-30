@@ -5,7 +5,7 @@ import datetime
 
 # Config
 region = "us-east-1"
-private_instance_id = "InstanceID"
+private_instance_id = "InstancePrivateID"
 bucket_name = "BucketName"
 namespace = "AWS/EC2"
 metrics = [
@@ -30,7 +30,7 @@ cloudwatch = boto3.client("cloudwatch", region_name=region)
 s3 = boto3.client("s3", region_name=region)
 
 with open(log_path, "w") as f:
-    f.write(f"Métricas del {today_str} para {private_instance_id}\n\n")
+    f.write(f"{today_str} Metrics to {private_instance_id}\n\n")
     for metric in metrics:
         response = cloudwatch.get_metric_statistics(
             Namespace=namespace,

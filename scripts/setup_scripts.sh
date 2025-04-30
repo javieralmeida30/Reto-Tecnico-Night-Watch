@@ -17,10 +17,12 @@ scp -i "$KEY_PATH" "$MANIFEST_PATH" "$REMOTE_USER@$BASTION_IP:/home/ec2-user/man
 echo "Deploying Nginx service on Kubernetes..."
 ssh -i "$KEY_PATH" "$REMOTE_USER@$BASTION_IP" << 'EOF'
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
-kubectl apply -f /home/ec2-user/manifests/nginx-deployment.yaml
+sudo kubectl apply -f /home/ec2-user/manifests/nginx-deployment.yaml
 EOF
 
 echo "Nginx deployment applied on Kubernetes Accessible at http://$BASTION_IP:30080"
+
+echo "#############################################################"
 
 echo "Creating scripts folder on the EC2 instance..."
 ssh -i "$KEY_PATH" "$REMOTE_USER@$BASTION_IP" "mkdir -p /home/ec2-user/scripts"
@@ -42,3 +44,4 @@ EOF
 
 echo "All scripts deployed and running on $BASTION_IP"
 echo "Access Nginx at: http://$BASTION_IP:30080/"
+echo "Access Prometheus at: http://$BASTION_IP:31080/"

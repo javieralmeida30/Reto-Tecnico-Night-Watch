@@ -92,11 +92,11 @@ Use the terraform command `terraform output` to export the outputs: terraform ou
 #  Terraform Modules Structure
 
 Modules:
-`vpc` Creates VPC, Subnets, NAT Gateway, Internet Gateway
-`ec2` Bastion host and private PostgreSQL EC2 
-`s3` Bucket for backups and metrics 
-`security_groups` Rules to control traffic between instances 
-`(Optional) route53`: Pre-configured module for future DNS assignment
+- `vpc` Creates VPC, Subnets, NAT Gateway, Internet Gateway
+- `ec2` Bastion host and private PostgreSQL EC2 
+- `s3` Bucket for backups and metrics 
+- `security_groups` Rules to control traffic between instances 
+- `(Optional) route53`: Pre-configured module for future DNS assignment
 
 Outputs:
 - Public and private IPs
@@ -114,7 +114,7 @@ Scripts:
 - `postgres_user_data.sh`  User data for PostgreSQL EC2 (Docker + PostgreSQL setup) 
 - `postgresql_daily_backup.sh`  Backs up PostgreSQL database daily to S3 
 - `ec2_logs_to_s3.py`  Collects CloudWatch metrics and uploads to S3 
-- `setup_scripts.sh`  Uploads scripts via SSH, deploys Nginx on Kubernetes, and configures backups
+- `setup_scripts.sh`  Uploads scripts via SSH, deploys Nginx and Prometheus on Kubernetes, and configures backups
 
 ---
 
