@@ -89,7 +89,7 @@ Use the terraform command `terraform output` to export the outputs: terraform ou
 
 ---
 # VPC Architecture
-![AWS VPC Diagram](/images/NightWatchVPCArquitecutre.png)
+![AWS VPC Diagram](/images/NightWatchVPCArquitecture.png)
 
 
  Components:
