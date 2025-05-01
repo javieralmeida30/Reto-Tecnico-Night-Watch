@@ -93,12 +93,12 @@ Use the terraform command `terraform output` to export the outputs: terraform ou
 
 
  Components:
-- 2 Public Subnets: resources that require direct internet access
-- 2 Private Subnets: internal services like databases
-- Internet Gateway: allowing public subnets to reach the internet
-- NAT Gateway: placed in a public subnet, enabling private subnets to access the internet securely
-- Availability Zones: distributed to ensure high availability and fault tolerance
-
+ - 2 Public Subnets: resources that require direct internet access
+ - 2 Private Subnets: internal services like databases
+ - Internet Gateway: allowing public subnets to reach the internet
+ - NAT Gateway: placed in a public subnet, enabling private subnets to access the internet securely
+ - Availability Zones: distributed to ensure high availability and fault tolerance
+ - Elastic IP: Associate to NAT Gateway
 ---
 
 #  Terraform Modules Structure
