@@ -88,7 +88,7 @@ Use the terraform command `terraform output` to export the outputs: terraform ou
  - Security Groups: Control access between instances 
 
 ---
-
+# VPC Architecture
 ![AWS VPC Diagram](/images/NightWatchVPCArquitecutre.png)
 
 
