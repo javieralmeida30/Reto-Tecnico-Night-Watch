@@ -75,7 +75,7 @@ Use the terraform command `terraform output` to export the outputs: terraform ou
 
 # Infrastructure Architecture
 
-![AWS Architecture Diagram](\images\NightWatchArquitecture.png)
+![AWS Architecture Diagram](/images/NightWatchArquitecture.png)
 
 
  Components:
@@ -89,7 +89,7 @@ Use the terraform command `terraform output` to export the outputs: terraform ou
 
 ---
 
-![AWS VPC Diagram](\images\NightWatchVPCArquitecutre.png)
+![AWS VPC Diagram](/images/NightWatchVPCArquitecutre.png)
 
 
  Components:
