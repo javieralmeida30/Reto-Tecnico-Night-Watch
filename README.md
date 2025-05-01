@@ -75,7 +75,7 @@ Use the terraform command `terraform output` to export the outputs: terraform ou
 
 # Infrastructure Architecture
 
-![AWS Architecture Diagram](NightWatchArquitecture.png)
+![AWS Architecture Diagram](\images\NightWatchArquitecture.png)
 
 
  Components:
@@ -86,6 +86,18 @@ Use the terraform command `terraform output` to export the outputs: terraform ou
  - CloudWatch: Monitors EC2 instances 
  - NAT Gateway: Internet access for private subnet 
  - Security Groups: Control access between instances 
+
+---
+
+![AWS VPC Diagram](\images\NightWatchVPCArquitecutre.png)
+
+
+ Components:
+- 2 Public Subnets: resources that require direct internet access
+- 2 Private Subnets: internal services like databases
+- Internet Gateway: allowing public subnets to reach the internet
+- NAT Gateway: placed in a public subnet, enabling private subnets to access the internet securely
+- Availability Zones: distributed to ensure high availability and fault tolerance
 
 ---
 
