@@ -144,8 +144,8 @@ Scripts:
 # Useful commands
 
 Terraform:
-- `terraform init`  Initialize Terraform project
-- `terraform plan`  Preview changes
+- `terraform init` Initialize Terraform project
+- `terraform plan` Preview changes
 - `terraform apply` Deploy infrastructure
 - `terraform destroy` Tear down infrastructure
 - `terraform output` Show output values
