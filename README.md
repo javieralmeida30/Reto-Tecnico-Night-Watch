@@ -138,3 +138,32 @@ Scripts:
   ```
 - Monitor EC2 instance **CPU utilization** and **network metrics**.
 - Create alerts inside Grafana.
+
+---
+
+# Useful commands
+
+Terraform:
+- `terraform init`  Initialize Terraform project
+- `terraform plan`  Preview changes
+- `terraform apply` Deploy infrastructure
+- `terraform destroy` Tear down infrastructure
+- `terraform output` Show output values
+AWS CLI:
+- `aws configure` Configure aws credentials
+- `aws s3 ls` List all buckets
+- `aws s3 ls s3://your-bucket-name` List objects in a specific bucket
+- `aws ec2 describe-instances` List EC2 instances
+SSH Access:
+- `ssh -i your-key.pem ec2-user@<public-ip>` Connect to EC2 instance
+Kubernetes (K3s / kubectl):
+- `kubectl get pods -A` Show all pods in all namespaces
+- `kubectl get nodes` Show nodes in the cluster
+- `kubectl describe pod <pod-name>` Details of a specific pod
+- `kubectl logs <pod-name>` Logs from a pod
+Docker:
+- `docker ps` List running containers
+- `docker ps -a` List all containers
+- `docker images` List download images
+- `docker exec -it <container-id> /bin/bash` Access a container
+- `docker logs` Show container logs
